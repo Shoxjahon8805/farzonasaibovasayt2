@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cactus Club: Amazing Desert Plants</title>
+<meta name="description" content="A fun website for 5th graders about cacti: how they survive in the desert, their spines, flowers, water storage and a quick quiz.">
+<meta property="og:title" content="Cactus Club: Amazing Desert Plants">
+<meta property="og:description" content="Learn how cacti survive without rain. Facts, vocabulary and a quiz for kids.">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--night:#2d1b4e;--dusk:#ff8a5c;--pink:#ff5fa2;--green:#2f9e5b;--lime:#b7e36b;--sand:#ffe9b8;--ink:#2a1a3a}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--sand);color:var(--ink);font-family:'Quicksand',system-ui,sans-serif;font-size:18px;line-height:1.6}
+h1,h2,h3{font-family:'Baloo 2','Trebuchet MS',sans-serif;line-height:1.1;margin:0 0 .5em}
+.hero{background:linear-gradient(var(--night),#8a3d7a 55%,var(--dusk));color:#fff;text-align:center;padding:3rem 1.2rem 0;position:relative;overflow:hidden}
+.hero h1{font-size:clamp(2.6rem,9vw,5.5rem);font-weight:800}
+.hero p{max-width:34rem;margin:0 auto 1.4rem;font-size:1.2rem}
+.sun{position:absolute;width:140px;height:140px;border-radius:50%;background:#ffd166;right:8%;bottom:20px;opacity:.9}
+.cact{position:relative;width:min(230px,55vw);display:block;margin:0 auto;animation:sway 3s ease-in-out infinite;transform-origin:50% 100%}
+@keyframes sway{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2deg)}}
+@media (prefers-reduced-motion:reduce){.cact{animation:none}}
+.btn{display:inline-block;background:var(--pink);color:#fff;font-family:'Baloo 2',sans-serif;font-weight:800;font-size:1.2rem;padding:.6rem 1.6rem;border-radius:999px;text-decoration:none;border:0;cursor:pointer}
+.btn:focus-visible,.opt:focus-visible{outline:3px solid #1b6fd1;outline-offset:3px}
+.ground{height:36px;background:var(--sand);margin-top:-2px}
+main{max-width:960px;margin:0 auto;padding:2.5rem 1.2rem}
+section{margin-bottom:3.5rem}
+h2{font-size:2.2rem;color:var(--green)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.2rem}
+.card{background:#fff;border-radius:22px;padding:1.3rem;border-bottom:8px solid var(--lime)}
+.card:nth-child(2n){border-bottom-color:var(--pink)}
+.card h3{font-size:1.4rem;color:var(--night)}
+.big{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1rem}
+.big div{background:var(--night);color:#fff;border-radius:26px 8px 26px 8px;padding:1.2rem}
+.big b{font-family:'Baloo 2',sans-serif;font-size:2.4rem;color:var(--lime);display:block;line-height:1.1}
+dl{display:grid;grid-template-columns:auto 1fr;gap:.5rem 1rem;background:#fff;padding:1.2rem;border-radius:20px;margin:0}
+dt{font-family:'Baloo 2',sans-serif;color:var(--pink);font-size:1.2rem}
+dd{margin:0}
+.quiz{background:#fff;border-radius:24px;padding:1.5rem;border:3px dashed var(--green)}
+.opts{display:grid;gap:.6rem;margin:1rem 0}
+.opt{font:inherit;color:inherit;text-align:left;background:var(--sand);border:2px solid var(--dusk);border-radius:14px;padding:.7rem 1rem;cursor:pointer}
+.opt.right{background:#b8e3a8;border-color:var(--green)}
+.opt.wrong{background:#f8b9b9;border-color:#c0392b}
+#fb{min-height:1.6em;font-weight:700}
+footer{background:var(--night);color:#fff;text-align:center;padding:2rem 1rem}
+</style>
+</head>
+<body>
+<header class="hero">
+  <h1>Cactus Club</h1>
+  <p>Cacti live where it almost never rains. Find out how these prickly plants stay alive in the hot, dry desert.</p>
+  <a class="btn" href="#quiz">Take the quiz</a>
+  <div class="sun"></div>
+  <svg class="cact" viewBox="0 0 200 240" role="img" aria-label="Cartoon cactus with a pink flower">
+    <rect x="70" y="30" width="60" height="200" rx="30" fill="#2f9e5b"/>
+    <path d="M70 130h-22a14 14 0 0 1-14-14V84a14 14 0 0 1 28 0v18h8z" fill="#2f9e5b"/>
+    <path d="M130 150h22a14 14 0 0 0 14-14V104a14 14 0 0 0-28 0v22h-8z" fill="#2f9e5b"/>
+    <g stroke="#1b6a3c" stroke-width="3" fill="none"><path d="M100 40v190M85 50v170M115 50v170"/></g>
+    <circle cx="100" cy="28" r="14" fill="#ff5fa2"/><circle cx="100" cy="28" r="6" fill="#ffd166"/>
+    <circle cx="90" cy="95" r="6" fill="#fff"/><circle cx="110" cy="95" r="6" fill="#fff"/>
+    <circle cx="91" cy="96" r="3" fill="#2a1a3a"/><circle cx="111" cy="96" r="3" fill="#2a1a3a"/>
+    <path d="M90 115q10 10 20 0" stroke="#2a1a3a" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <ellipse cx="100" cy="232" rx="60" ry="8" fill="#c98b4a"/>
+  </svg>
+</header>
+<div class="ground"></div>
+
+<main>
+<section>
+  <h2>Cactus fast facts</h2>
+  <div class="big">
+    <div><b>1,800+</b>Kinds of cacti in the world</div>
+    <div><b>15 m</b>Height of a giant saguaro</div>
+    <div><b>150 yrs</b>Age a saguaro can reach</div>
+    <div><b>Americas</b>Where wild cacti come from</div>
+  </div>
+</section>
+
+<section>
+  <h2>How cacti survive</h2>
+  <div class="grid">
+    <div class="card"><h3>Water tanks</h3><p>A cactus stem is thick and soft inside. It soaks up water after a rain and stores it for months.</p></div>
+    <div class="card"><h3>Spines, not leaves</h3><p>Spines are special leaves. They lose less water than flat leaves, shade the stem and keep hungry animals away.</p></div>
+    <div class="card"><h3>Waxy skin</h3><p>A thick, waxy coat seals water inside, like a lid on a bottle.</p></div>
+    <div class="card"><h3>Night breathing</h3><p>Many cacti open their tiny pores at night, when it is cooler, so less water escapes.</p></div>
+    <div class="card"><h3>Wide, shallow roots</h3><p>Roots spread out close to the ground, ready to drink fast when rain finally falls.</p></div>
+    <div class="card"><h3>Flowers and fruit</h3><p>Many cacti bloom with bright flowers. Bees, bats and birds visit them, and some fruits are sweet to eat.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Cactus words</h2>
+  <dl>
+    <dt>Spine</dt><dd>A sharp, hard point that grows from a cactus.</dd>
+    <dt>Desert</dt><dd>A very dry place that gets little rain.</dd>
+    <dt>Succulent</dt><dd>A plant that stores water in thick stems or leaves.</dd>
+    <dt>Photosynthesis</dt><dd>How plants use sunlight to make food.</dd>
+    <dt>Pollinator</dt><dd>An animal, like a bee or bat, that carries pollen between flowers.</dd>
+  </dl>
+</section>
+
+<section>
+  <h2>Grow your own</h2>
+  <div class="card"><p>Ask an adult before you start! Use a pot with holes and special cactus soil. Put it in a sunny window. Water it only when the soil is completely dry, about once every 2 to 3 weeks. Too much water is the number one cactus killer.</p></div>
+</section>
+
+<section id="quiz">
+  <h2>Quick quiz</h2>
+  <div class="quiz">
+    <p id="q" style="font-weight:700;font-size:1.25rem"></p>
+    <div class="opts" id="opts"></div>
+    <p id="fb" aria-live="polite"></p>
+    <button class="btn" id="next" style="display:none">Next question</button>
+  </div>
+</section>
+</main>
+
+<footer><p>Made for curious 5th graders. Stay sharp and keep learning!</p></footer>
+
+<script>
+var Q=[
+ {q:"What does a cactus store inside its stem?",o:["Sand","Water","Sugar candy"],a:1},
+ {q:"What are cactus spines really?",o:["Roots","Flowers","Special leaves"],a:2},
+ {q:"Where do wild cacti mostly come from?",o:["The Americas","Antarctica","Northern Europe"],a:0},
+ {q:"How often should you water a pet cactus?",o:["Every day","Only when the soil is dry","Never"],a:1}
+];
+var i=0,score=0,done=false;
+var q=document.getElementById('q'),opts=document.getElementById('opts'),fb=document.getElementById('fb'),nx=document.getElementById('next');
+function show(){
+  done=false;fb.textContent='';nx.style.display='none';
+  q.textContent=(i+1)+'. '+Q[i].q;opts.innerHTML='';
+  Q[i].o.forEach(function(t,k){
+    var b=document.createElement('button');b.className='opt';b.textContent=t;
+    b.onclick=function(){
+      if(done)return;done=true;
+      if(k===Q[i].a){score++;b.className='opt right';fb.textContent='Correct! Great job!';}
+      else{b.className='opt wrong';opts.children[Q[i].a].className='opt right';fb.textContent='Not quite. The right answer is highlighted.';}
+      nx.style.display='inline-block';nx.textContent=i<Q.length-1?'Next question':'See my score';
+    };
+    opts.appendChild(b);
+  });
+}
+nx.onclick=function(){
+  if(i<Q.length-1){i++;show();}
+  else if(nx.textContent==='See my score'){
+    q.textContent='You got '+score+' out of '+Q.length+'!';opts.innerHTML='';
+    fb.textContent=score===Q.length?'Perfect! You are a cactus expert!':'Nice try! Read the facts again and play once more.';
+    nx.textContent='Play again';
+  } else {i=0;score=0;show();}
+};
+show();
+</script>
+</body>
+</html>
